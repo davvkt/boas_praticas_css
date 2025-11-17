@@ -1,0 +1,33 @@
+// sass/_product-card.scss
+
+.product-card {
+    // Estilos do Bloco .product-card (o antigo .produto)
+    // A regra .produto estava vazia, mas a .product-item tinha uma margem no mobile
+    
+    @media screen and (max-width: 767px) {
+        margin-bottom: 32px;
+    }
+
+    // Elemento .product-card__image
+    &__image {
+        width: 100%;
+    }
+
+    // Elemento .product-card__title
+    &__title {
+        font-size: 1.2em;
+        margin: 8px 0;
+    }
+
+    // Elemento .product-card__description
+    &__description {
+        color: gray;
+    }
+
+    // Modificador .product-card--featured
+    &--featured {
+        border: 2px solid gold;
+        padding: 8px;
+        background-color: #ffff42;
+    }
+}

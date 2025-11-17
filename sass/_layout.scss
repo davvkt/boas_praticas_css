@@ -1,0 +1,26 @@
+// sass/_layout.scss
+
+.product-grid {
+    max-width: 640px;
+    width: 100%;
+    margin: 56px auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-column-gap: 1%;
+}
+
+/* Media Queries que afetam o grid */
+@media screen and (max-width: 1023px) {
+    .product-grid {
+        /* A regra .container não existe no HTML, então focamos na .product-grid */
+        max-width: 80%; /* Assumindo que era isso que o .container fazia */
+        grid-template-columns: repeat(2, 48.5%);
+        grid-column-gap: 3%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .product-grid {
+        display: block;
+    }
+}
