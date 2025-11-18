@@ -1,26 +1,22 @@
 // sass/_layout.scss
+@use 'variables'; // Importante!
 
 .product-grid {
-    max-width: 640px;
+    max-width: variables.$largura-grid;
     width: 100%;
     margin: 56px auto;
     display: grid;
     grid-template-columns: 33% 33% 33%;
-    grid-column-gap: 1%;
-}
+    grid-column-gap: variables.$gap-grid;
 
-/* Media Queries que afetam o grid */
-@media screen and (max-width: 1023px) {
-    .product-grid {
-        /* A regra .container não existe no HTML, então focamos na .product-grid */
-        max-width: 80%; /* Assumindo que era isso que o .container fazia */
+    // Media Queries
+    @media screen and (max-width: 1023px) {
+        max-width: 80%;
         grid-template-columns: repeat(2, 48.5%);
         grid-column-gap: 3%;
     }
-}
 
-@media screen and (max-width: 767px) {
-    .product-grid {
+    @media screen and (max-width: 767px) {
         display: block;
     }
 }
